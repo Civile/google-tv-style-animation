@@ -1,0 +1,235 @@
+body {
+  overflow-x: hidden;
+  background-color: black;
+}
+.col {
+  padding: 5px;
+}
+.first {
+  height: 910px;
+}
+.container {
+  margin-bottom: 300px;
+  height: 100vh;
+  display: flex;
+}
+.col {
+  width: 33.333%;
+  height: fit-content;
+}
+.box-wrapper {
+  height: 100%;
+  width: calc(100% - 4px);
+}
+.box {
+  height: 100%;
+  border: 1px solid black;
+  background-color: chocolate;
+  min-height: 230px;
+  width: 100%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  vertical-align: middle;
+  background-size: cover;
+  overflow: hidden;
+  will-change: transform, opacity;
+}
+.box:not(.highlighted)::after {
+  content: '';
+  position: absolute;
+  opacity: 0.6;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}
+.image-poster {
+  position:absolute;
+  top:0px;
+  left:0px;
+  opacity: 1;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+.poster-1 {
+  background-image: url('images/poster1.png');
+}
+.poster-2 {
+  background-image: url('images/poster2.png');
+}
+.poster-3 {
+  background-image: url('images/poster3.png');
+}
+.poster-4 {
+  background-image: url('images/poster4.png');
+}
+.poster-5 {
+  background-image: url('images/poster5.png');
+}
+.poster-6 {
+  background-image: url('images/poster6.png');
+}
+.poster-7 {
+  background-image: url('images/poster7.png');
+}
+.poster-8 {
+  background-image: url('images/poster8.png');
+}
+.poster-9 {
+  background-image: url('images/poster9.png');
+}
+.box video {
+  width: 100%;
+  height: 100%;
+  background: black;
+  background-color: skyblue;
+}
+.box span {
+  margin: 0 auto;
+  font-weight: bold;
+  font-size: 30px;
+}
+#box1 {
+  opacity: 0.1;
+  transform: translateX(-200px) translateY(-550px);
+}
+#box2 {
+  opacity: 0;
+  transform: translateX(-500px);
+}
+#box3 {
+  opacity: 0;
+  transform: translateX(-250px) translateY(350px);
+}
+#box4 {
+  opacity: 0;
+  transform: translateX(0px) translateY(-650px);
+}
+#box5 {
+  opacity: 1;
+  transform: scale(3.3);
+  z-index: 1;
+  position: relative;
+}
+#box5 video {
+  opacity: 1;
+  position: absolute;
+  top: 0px;
+  left:0px;
+}
+#box6 {
+  opacity: 0;
+  transform: translateX(0px) translateY(650px);
+}
+#box7 {
+  opacity: 0;
+  transform: translateX(200px) translateY(-550px);
+}
+#box8 {
+  opacity: 0;
+  transform: translateX(500px);
+}
+#box9 {
+  opacity: 0;
+  transform: translateX(200px) translateY(350px);
+}
+.media-name {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  font-size: 25px;
+  color: white;
+  z-index: 2;
+  width: 65px;
+}
+.media-name img {
+  width: 100%;
+}
+
+
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 667px) 
+  and (-webkit-min-device-pixel-ratio: 2) { 
+    .container {
+      display: block;
+      width: 100%;
+    }
+    .col {
+      padding-top: 56.25%;
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    } 
+    .col .box-wrapper {
+      position: absolute;
+    }
+    .col .box-wrapper:first-child {
+      top: 0;
+      left: -100%;
+    }
+    .col .box-wrapper:nth-child(2) {
+      top: 0;
+      left: 0%;
+    }
+    .col .box-wrapper:nth-child(3) {
+      top: 0;
+      left: 100%;
+    }
+
+    .box:not(.highlighted)::after {
+      opacity: 0 !important;
+    }
+
+
+
+
+
+    #box1 {
+      opacity: 0.1;
+      transform: translateX(0px) translateY(-300px);
+    }
+    #box2 {
+      opacity: 0;
+      transform: translateX(0px) translateY(-300px);
+    }
+    #box3 {
+      opacity: 0;
+      transform: translateX(0px) translateY(-300px);
+    }
+    #box4 {
+      opacity: 0;
+      transform: translateX(0px) scale(-650px);
+    }
+    #box5 {
+      opacity: 1;
+      transform: scale(3.3);
+      z-index: 1;
+      position: relative;
+    }
+    #box5 video {
+      opacity: 1;
+      position: absolute;
+      top: 0px;
+      left:0px;
+    }
+    #box6 {
+      opacity: 0;
+      transform: translateX(0px) translateY(650px);
+    }
+    #box7 {
+      opacity: 0;
+      transform: translateX(0px) scale(2);
+    }
+    #box8 {
+      opacity: 0;
+      transform: translateX(0px) scale(2);
+    }
+    #box9 {
+      opacity: 0;
+      transform: translateX(0px) scale(2);
+    }
+
+}
